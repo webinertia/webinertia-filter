@@ -12,7 +12,7 @@ use function password_hash;
 
 use const PASSWORD_DEFAULT;
 
-final class Password extends Filter\AbstractFilter
+final class PasswordHash extends Filter\AbstractFilter
 {
     /** @param string $value */
     public function filter($value): string

@@ -24,7 +24,7 @@ final class ConfigProvider
                 LabelToTitle::class         => Factory\InvokableFactory::class,
                 TitleToLabel::class         => Factory\InvokableFactory::class,
                 PadFloatString::class       => Factory\InvokableFactory::class,
-                Password::class             => Factory\InvokableFactory::class,
+                PasswordHash::class         => Factory\InvokableFactory::class,
                 RegistrationHash::class     => Factory\InvokableFactory::class,
             ],
         ];

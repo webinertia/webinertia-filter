@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Webinertia\Filter;
 
-use Laminas\ServiceManager\Factory;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 final class ConfigProvider
 {
+    public const UUID_DEFAULT_VERSION = 7;
+
     public function getDependencyConfig(): array
     {
         return [];
@@ -17,15 +19,16 @@ final class ConfigProvider
     {
         return [
             'factories' => [
-                DbDateFormatter::class      => Factory\InvokableFactory::class,
-                DelimitedString::class      => Factory\InvokableFactory::class,
-                FqcnToControllerName::class => Factory\InvokableFactory::class,
-                FqcnToModuleName::class     => Factory\InvokableFactory::class,
-                LabelToTitle::class         => Factory\InvokableFactory::class,
-                TitleToLabel::class         => Factory\InvokableFactory::class,
-                PadFloatString::class       => Factory\InvokableFactory::class,
-                PasswordHash::class         => Factory\InvokableFactory::class,
-                RegistrationHash::class     => Factory\InvokableFactory::class,
+                DbDateFormatter::class      => InvokableFactory::class,
+                DelimitedString::class      => InvokableFactory::class,
+                FqcnToControllerName::class => InvokableFactory::class,
+                FqcnToModuleName::class     => InvokableFactory::class,
+                LabelToTitle::class         => InvokableFactory::class,
+                TitleToLabel::class         => InvokableFactory::class,
+                PadFloatString::class       => InvokableFactory::class,
+                PasswordHash::class         => InvokableFactory::class,
+                RegistrationHash::class     => InvokableFactory::class,
+                Uuid::class                 => InvokableFactory::class,
             ],
         ];
     }

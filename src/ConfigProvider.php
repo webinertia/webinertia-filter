@@ -10,12 +10,14 @@ final class ConfigProvider
 {
     public const UUID_DEFAULT_VERSION = 7;
 
-    public function getDependencyConfig(): array
+    public function __invoke()
     {
-        return [];
+        return [
+            'dependencies' => $this->getDependencyConfig(),
+        ];
     }
 
-    public function getFilterConfig(): array
+    public function getDependencyConfig(): array
     {
         return [
             'factories' => [

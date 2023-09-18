@@ -10,9 +10,7 @@ final class Module
     {
         $configProvider = new ConfigProvider();
         return [
-            'service_manager' => $configProvider->getDependencyConfig(),
-            'filters'         => $configProvider->getFilterConfig(),
-            'filter_config'   => $configProvider->getFilterConfig(),
+            'filters' => $configProvider->getDependencyConfig(),
         ];
     }
 }
